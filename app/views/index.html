@@ -7,13 +7,24 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
-    <h1 class="govuk-heading-xl">
+    <h1 class="govuk-heading-xl govuk-!-margin-top-2">
       {{ serviceName }}
     </h1>
+    
+    <p class="govuk-body-l govuk-!-margin-top-2">Assessing Risks, Needs and Strengths</p>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    <h3 class="govuk-heading-s">About this page</h3>
+    <p class="govuk-body">This page contains prototype work for the Assessing Risks, Needs and Strengths (ARNS) service. It is used to support user research and testing as the service is developed and iterated.</p>
+
+
+    {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+    {{ govukInsetText({
+      text: "Testing the nunjucks components."
+    }) }}
+
+
   </div>
 </div>
 
