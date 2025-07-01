@@ -26,7 +26,7 @@
             CRN: X769773 | PNC: 01/17658481A | Date of birth: 02 October 1969
           </span>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; margin-top: 10px;">
-            <h3 class="govuk-heading-m" style="margin-bottom: 0;">Vincenza Reichel</h3>
+            <h3 class="govuk-heading-m" style="margin-bottom: 0;">Alex Smith</h3>
             <a href="print-preview" class="govuk-link print-link">Print</a>
           </div>
           <div id="assessment-info" class="govuk-visually-hidden" data-assessment-id="88b81aaa-7af7-49ed-8843-1fad974b3e72"></div>
@@ -196,7 +196,7 @@ function renderDrugsSection() {
         <div class="govuk-form-group form-group give-details-wide">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend how_often_used_last_six_months_${drug.value.toLowerCase()} ">
-              How often is Margarett using this drug?
+              How often is Alex using this drug?
             </legend>
             <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -236,11 +236,12 @@ function renderDrugsSection() {
   // Not used in the last 6 months
   html += '<h3 class="govuk-heading-m">Not used in the last 6 months</h3>';
   html += `<div class="govuk-inset-text no-wrap">
-    Margarett used Cannabis, Hallucinogenics (including ketamine) more than 6 months ago.
+    Alex used Cannabis, Hallucinogenics (including ketamine) more than 6 months ago.
   </div>`;
   // Give details textarea
   html += `<div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
-    <h4 class="govuk-heading-m give-details-no-wrap">Give details about Margarett's use of these drugs</h4>
+    <h4 class="govuk-heading-m give-details-no-wrap">Give details about Alex's use of these drugs</h4>
+
     <div id="not_used_details-hint" class="govuk-hint no-wrap">
       For example, how often they used these drugs, when they stopped using, and if their use was an issue.
     </div>
@@ -250,11 +251,12 @@ function renderDrugsSection() {
     <div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true">You have 2,000 characters remaining</div>
     <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
   </div>`;
-  // Which drugs has Margarett injected?
+  // Which drugs has Alex injected?
   html += `<div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        Which drugs has Margarett injected?
+        Which drugs has Alex injected?
+
       </legend>
       <div class="govuk-hint">Select all that apply.</div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -271,7 +273,8 @@ function renderDrugsSection() {
         </div>
         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="heroin-injected-conditional">
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="heroin_injected_when">When has Margarett injected this drug?</label>
+            <label class="govuk-label govuk-label--s" for="heroin_injected_when">When has Alex injected this drug?</label>
+
             <div class="govuk-hint">Select one or both.</div>
             <div class="govuk-checkboxes" id="heroin_injected_when_group">
               <div class="govuk-checkboxes__item">
@@ -288,11 +291,12 @@ function renderDrugsSection() {
       </div>
     </fieldset>
   </div>`;
-  // Is Margarett receiving treatment?
+  // Is Alex receiving treatment?
   html += `<div class="govuk-form-group give-details-wide">
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        Is Margarett receiving treatment for their drug use?
+        Is Alex receiving treatment for their drug use?
+
       </legend>
       <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
