@@ -218,7 +218,7 @@ function renderDrugsSection() {
         <div class="form-group">
           <div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
             <label class="govuk-label how_often_used_last_six_months_${drug.value.toLowerCase()}_details " for="how_often_used_last_six_months_${drug.value.toLowerCase()}_details">Give details (optional)</label>
-            <div class="govuk-hint" style="color: #505a5f; margin-bottom: 15px;">Include details of any evidence. For example, mandatory drug testing.</div>
+            <div class="govuk-hint" style="color: #505a5f; margin-bottom: 15px;">Include details of any evidence.</div>
             <div class="grow-wrap" data-replicated-value="">
               <textarea class="govuk-textarea govuk-!-width-full govuk-js-character-count" id="how_often_used_last_six_months_${drug.value.toLowerCase()}_details" name="how_often_used_last_six_months_${drug.value.toLowerCase()}_details" rows="5" aria-describedby="how_often_used_last_six_months_${drug.value.toLowerCase()}_details-info" data-grow-wrap=""></textarea>
             </div>
@@ -227,32 +227,16 @@ function renderDrugsSection() {
             <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
           </div>
         </div>
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
       </div>
     `;
   });
-  // Not used in the last 6 months
-  html += '<h3 class="govuk-heading-m">Used more than 6 months before custody</h3>';
-  html += `<div class="govuk-inset-text no-wrap">
-    Alex used Cannabis, Hallucinogens more than 6 months before custody.
-  </div>`;
-  // Give details textarea
-  html += `<div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
-    <h4 class="govuk-heading-m give-details-no-wrap">Give details about Alex's use of these drugs</h4>
-    <div id="not_used_details-hint" class="govuk-hint">
-      For example, how often they used these drugs, when they stopped using, and if their use was an issue.
-    </div>
-    <div class="grow-wrap" data-replicated-value="">
-      <textarea class="govuk-textarea govuk-!-width-full govuk-js-character-count" id="not_used_details" name="not_used_details" rows="5" aria-describedby="not_used_details-hint"></textarea>
-    </div>
-    <div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true">You have 2,000 characters remaining</div>
-    <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
-  </div>`;
+
   // Which drugs has Alex injected?
+  html += `<div style="margin-top: 50px;"></div>`;
   html += `<div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        Which drugs has Alex injected?
+        Which drugs did Alex inject before custody?
       </legend>
       <div class="govuk-hint">Select all that apply.</div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -317,16 +301,10 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       // Go to drug3a (Flow duo)
-      window.location.href = 'drug3a.html';
+      window.location.href = 'drug2a.html';
     });
   }
-  var backLink = document.querySelector('a.govuk-back-link');
-  if (backLink) {
-    backLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'drug2b.html';
-    });
-  }
+
 });
 
 // Prevent navigation for all side nav links

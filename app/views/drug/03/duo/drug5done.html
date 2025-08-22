@@ -257,7 +257,7 @@
           
 
 
-                  <h3 class="govuk-heading-m drugs-summary__subheading">More information</h3>
+                  <h3 class="govuk-heading-m drugs-summary__subheading">Drug use background</h3>
 
 
 
@@ -347,141 +347,55 @@
                 </div>
               </div>
               <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="practitioner-analysis" role="tabpanel" aria-labelledby="tab_practitioner-analysis">
-                <form id="form" method="post" action="#practitioner-analysis" data-autosave="true" data-autosave-enabled="true">
-                  <input type="hidden" name="x-csrf-token" value="EuxWnrI0-8q4EJzV1Hs00SUJbMxT4CGyrAbI">
-                  <div class="govuk-form-group form-group ">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend drugs_practitioner_analysis_motivated_to_stop govuk-fieldset__legend--m">
-                        Does Alex seem motivated to stop or reduce their drug use?
-                      </legend>
-                      <div class="govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="NO_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop">
-                            Does not show motivation to stop or reduce
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-2" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="PARTIAL_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-2">
-                            Shows some motivation to stop or reduce 
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-3" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="FULL_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-3">
-                            Motivated to stop or reduce
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-4" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="UNKNOWN">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-4">
-                            Unknown
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="govuk-form-group form-group ">
+                <form id="form" method="post">
+                  <dl class="govuk-summary-list summary-list">
                     
-                  
-                  
-                  <!-- New question: hello? -->
-                  <div class="govuk-form-group form-group ">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are there any strengths or protective factors related to Alex's drug use?</legend>
-                      <div class="govuk-hint">Include any strategies, people or support networks that helped.</div>
-                      <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_yes" name="hello" type="radio" value="YES" aria-controls="conditional-hello-yes" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_yes">Yes</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-yes">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_yes">Give details</label>
-                            <textarea class="govuk-textarea" id="hello_details_yes" name="hello_details_yes" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,425 characters remaining</div>
-                          </div>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_no" name="hello" type="radio" value="NO" aria-controls="conditional-hello-no" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_no">No</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-no">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_no">Give details (optional)</label>
-                            <textarea class="govuk-textarea" id="hello_details_no" name="hello_details_no" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,425 characters remaining</div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <!-- Duplicate 1 -->
-                  <div class="govuk-form-group form-group ">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Is Alex's drug use linked to risk of serious harm?</legend>
-                      <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_yes_2" name="hello_2" type="radio" value="YES" aria-controls="conditional-hello-yes-2" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_yes_2">Yes</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-yes-2">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_yes_2">Give details</label>
-                            <textarea class="govuk-textarea" id="hello_details_yes_2" name="hello_details_yes_2" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,425 characters remaining</div>
-                          </div>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_no_2" name="hello_2" type="radio" value="NO" aria-controls="conditional-hello-no-2" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_no_2">No</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-no-2">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_no_2">Give details (optional)</label>
-                            <textarea class="govuk-textarea" id="hello_details_no_2" name="hello_details_no_2" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,425 characters remaining</div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <!-- Duplicate 2 -->
-                  <div class="govuk-form-group form-group ">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Is Alex's drug use linked to risk of reoffending?</legend>
-                      <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_yes_3" name="hello_3" type="radio" value="YES" aria-controls="conditional-hello-yes-3" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_yes_3">Yes</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-yes-3">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_yes_3">Give details</label>
-                            <textarea class="govuk-textarea" id="hello_details_yes_3" name="hello_details_yes_3" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,000 characters remaining</div>
-                          </div>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="hello_no_3" name="hello_3" type="radio" value="NO" aria-controls="conditional-hello-no-3" aria-expanded="false">
-                          <label class="govuk-label govuk-radios__label" for="hello_no_3">No</label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hello-no-3">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="hello_details_no_3">Give details (optional)</label>
-                            <textarea class="govuk-textarea" id="hello_details_no_3" name="hello_details_no_3" rows="5"></textarea>
-                            <div class="govuk-hint govuk-character-count__status" aria-live="polite">You have 1,000 characters remaining</div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="questiongroup-action-buttons">
-                    <a href="drug5done#practitioner-analysis" class="govuk-button govuk-!-margin-bottom-3 govuk-!-margin-right-1" role="button" draggable="false" data-module="govuk-button" data-govuk-button-init="">
-                      Mark as complete
-                    </a>
-                  </div>
+                    <div class="govuk-summary-list__row summary-list__row">
+                      <dt class="govuk-summary-list__key summary-list__key">
+                        <span class="summary__label">Are there any strengths or protective factors related to Alex's drug use?</span>
+                      </dt>
+                      <dd class="govuk-summary-list__value summary-list__value">
+                        <ul class="govuk-list">
+                          <li class="summary-details-list">
+                            <span class="summary__answer">No</span>
+                          </li>
+                        </ul>
+                      </dd>
+                      <dd class="govuk-summary-list__actions summary-list__actions">
+                        <a class="govuk-link govuk-link--disabled" aria-disabled="true" tabindex="-1">Change<span class="govuk-visually-hidden"> value for Are there any strengths or protective factors related to Alex's drug use?</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row summary-list__row">
+                      <dt class="govuk-summary-list__key summary-list__key">
+                        <span class="summary__label">Is Alex's drug use linked to risk of serious harm?</span>
+                      </dt>
+                      <dd class="govuk-summary-list__value summary-list__value">
+                        <ul class="govuk-list">
+                          <li class="summary-details-list">
+                            <span class="summary__answer">No</span>
+                          </li>
+                        </ul>
+                      </dd>
+                      <dd class="govuk-summary-list__actions summary-list__actions">
+                        <a class="govuk-link govuk-link--disabled" aria-disabled="true" tabindex="-1">Change<span class="govuk-visually-hidden"> value for Is Alex's drug use linked to risk of serious harm?</span></a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row summary-list__row">
+                      <dt class="govuk-summary-list__key summary-list__key">
+                        <span class="summary__label">Is Alex's drug use linked to risk of reoffending?</span>
+                      </dt>
+                      <dd class="govuk-summary-list__value summary-list__value">
+                        <ul class="govuk-list">
+                          <li class="summary-details-list">
+                            <span class="summary__answer">No</span>
+                          </li>
+                        </ul>
+                      </dd>
+                      <dd class="govuk-summary-list__actions summary-list__actions">
+                        <a class="govuk-link govuk-link--disabled" aria-disabled="true" tabindex="-1">Change<span class="govuk-visually-hidden"> value for Is Alex's drug use linked to risk of reoffending?</span></a>
+                      </dd>
+                    </div>
+                  </dl>
                 </form>
               </div>
             </div>
