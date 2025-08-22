@@ -66,11 +66,11 @@
               <li class="moj-side-navigation__item" style="margin-bottom: 5px; padding: 8px 16px;">
                 <a href="#" style="color: #1d70b8; text-decoration: none;">Finances</a>
               </li>
-              <li class="moj-side-navigation__item" style="margin-bottom: 5px; padding: 8px 16px;">
-                <a href="#" style="color: #1d70b8; text-decoration: none;">Drug use</a>
-              </li>
               <li class="moj-side-navigation__item moj-side-navigation__item--active" style="background: #f3f2f1; font-weight: bold; border-left: 4px solid #1d70b8; margin-bottom: 5px; padding: 8px 16px;">
-                <a href="#" aria-current="location" class="govuk-link" tabindex="-1" aria-disabled="true" onclick="return false;" style="color: #1d70b8; text-decoration: none; font-weight: bold; cursor: default; pointer-events: none;">Alcohol use</a>
+                <a href="#" aria-current="location" class="govuk-link" tabindex="-1" aria-disabled="true" onclick="return false;" style="color: #1d70b8; text-decoration: none; font-weight: bold; cursor: default; pointer-events: none;">Drug use</a>
+              </li>
+              <li class="moj-side-navigation__item" style="margin-bottom: 5px; padding: 8px 16px;">
+                <a href="#" style="color: #1d70b8; text-decoration: none;">Alcohol use</a>
               </li>
               <li class="moj-side-navigation__item" style="margin-bottom: 5px; padding: 8px 16px;">
                 <a href="#" style="color: #1d70b8; text-decoration: none;">Health and wellbeing</a>
@@ -88,86 +88,37 @@
           </nav>
         </div>
         <div class="govuk-grid-column-two-thirds">
-          <a href="javascript:history.back()" class="govuk-back-link">Back</a>
           <div class="section-heading">
             <div class="section-heading__heading" style="display: flex; justify-content: space-between; align-items: center;">
-              <span class="govuk-caption-l" style="color: #0b0c0c;">Alcohol use</span>
+              <span class="govuk-caption-l" style="color: #0b0c0c;">Drug use</span>
               <strong class="govuk-tag govuk-tag--grey" style="align-self: center;">Incomplete</strong>
             </div>
-            <h2 class="govuk-heading-l" style="margin-bottom: 0;">Alcohol use before custody</h2>
+            <h2 class="govuk-heading-l" style="margin-bottom: 0;">Has Alex ever misused drugs?</h2>
           </div>
-          <br>
+
           <div class="govuk-!-width-three-quarters">
             <form id="form" method="post" action="#">
               <div class="govuk-form-group form-group ">
-                <fieldset class="govuk-fieldset" aria-describedby="alcohol_evidence-hint">
-                  <legend class="govuk-fieldset__legend alcohol_evidence govuk-fieldset__legend--m">
-                    Did Alex show evidence of binge drinking or excessive alcohol use in the 6 months before custody?
-                  </legend>
+                <fieldset class="govuk-fieldset" aria-describedby="drug_use-hint">
            
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_evidence_none" name="alcohol_evidence" type="radio" value="none">
-                      <label class="govuk-label govuk-radios__label" for="alcohol_evidence_none">
-                        No evidence of binge drinking or excessive alcohol use
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_evidence_some" name="alcohol_evidence" type="radio" value="some">
-                      <label class="govuk-label govuk-radios__label" for="alcohol_evidence_some">
-                        Some evidence of binge drinking or excessive alcohol use<br>
-                        <span class="govuk-hint">There is a pattern of alcohol use but has not caused any serious problems.</span>
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_evidence_detrimental" name="alcohol_evidence" type="radio" value="detrimental">
-                      <label class="govuk-label govuk-radios__label" for="alcohol_evidence_detrimental">
-                        Evidence of binge drinking or excessive alcohol use<br>
-                        <span class="govuk-hint">There is a detrimental effect on other areas of their life and is often directly related to offending.</span>
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              
-              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="margin-top: 40px; margin-bottom: 20px; border-top: 0.5px solid #b1b4b6;">
 
-<br>
-              <h2 class="govuk-heading-l" style="margin-bottom: 0;">Alcohol use in custody</h2>
-              <br>
-              
-              <div class="govuk-form-group form-group ">
-                <fieldset class="govuk-fieldset" aria-describedby="alcohol_custody-hint">
-                  <legend class="govuk-fieldset__legend alcohol_custody govuk-fieldset__legend--m">
-                    Is there evidence Alex has been drinking alcohol in custody?
-                  </legend>
+                  <div id="drug_use-hint" class="govuk-hint" style="margin-top: 10px;">
+
+                    This includes illegal and prescription drugs.
+                  </div>
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_custody_yes" name="alcohol_custody" type="radio" value="yes" aria-controls="conditional-alcohol_custody-yes" aria-expanded="false">
-                      <label class="govuk-label govuk-radios__label" for="alcohol_custody_yes">Yes</label>
+                      <input class="govuk-radios__input" id="drug_use" name="drug_use" type="radio" value="YES" aria-controls="conditional-drug_use" aria-expanded="false">
+                      <label class="govuk-label govuk-radios__label" for="drug_use">Yes</label>
                     </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-alcohol_custody-yes">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="alcohol_custody_details">Give details</label>
-                        <textarea class="govuk-textarea govuk-js-character-count" id="alcohol_custody_details" name="alcohol_custody_details" rows="5" maxlength="2000" aria-describedby="alcohol_custody_details-info"></textarea>
-                        <div id="alcohol_custody_details-info" class="govuk-hint govuk-character-count__message" style="margin-top: -20px;">You have 2,000 characters remaining</div>
-                      </div>
-                    </div>
+                    
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_custody_no" name="alcohol_custody" type="radio" value="no" aria-controls="conditional-alcohol_custody-no" aria-expanded="false">
-                      <label class="govuk-label govuk-radios__label" for="alcohol_custody_no">No</label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-alcohol_custody-no">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="alcohol_custody_details_no">Give details (optional)</label>
-                        <textarea class="govuk-textarea govuk-js-character-count" id="alcohol_custody_details_no" name="alcohol_custody_details_no" rows="5" maxlength="2000" aria-describedby="alcohol_custody_details_no-info"></textarea>
-                        <div id="alcohol_custody_details_no-info" class="govuk-hint govuk-character-count__message" style="margin-top: -20px;">You have 2,000 characters remaining</div>
-                      </div>
+                      <input class="govuk-radios__input" id="drug_use-2" name="drug_use" type="radio" value="NO">
+                      <label class="govuk-label govuk-radios__label" for="drug_use-2">No</label>
                     </div>
                   </div>
                 </fieldset>
               </div>
-              
               <div class="questiongroup-action-buttons">
                 <button value="YES" type="submit" name="drug_use_is_drug_use_user_submitted" class="govuk-button govuk-!-margin-bottom-3 govuk-!-margin-right-1" data-module="govuk-button">Save and continue</button>
               </div>
@@ -194,9 +145,18 @@ document.addEventListener('DOMContentLoaded', function() {
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      // Simple navigation for alcohol frequency question
-      // Go to next alcohol question
-      window.location.href = 'alco4.html';
+      var yesRadio = document.getElementById('drug_use');
+      var noRadio = document.getElementById('drug_use-2');
+      var beforeCustodyCheckbox = document.getElementById('drug_location_community');
+      var inCustodyCheckbox = document.getElementById('drug_location_custody');
+      
+      if (yesRadio && yesRadio.checked) {
+        // "Yes" selected - go to drug2b
+        window.location.href = 'drug2b.html';
+      } else if (noRadio && noRadio.checked) {
+        // "No" selected - go to drug5no
+        window.location.href = 'drug5no.html';
+      }
     });
   }
 });
