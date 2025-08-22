@@ -397,13 +397,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var backLink = document.querySelector('a.govuk-back-link');
-  if (backLink) {
-    backLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'drug3a.html';
-    });
-  }
+
   var form = document.getElementById('form');
   if (form) {
     form.addEventListener('submit', function(e) {

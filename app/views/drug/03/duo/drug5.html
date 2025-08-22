@@ -190,7 +190,9 @@
                                       <span class="summary__answer">Yes</span>
                                     </li>
                                     <li class="summary-details-list">
-                                      <span class="summary__answer">Used in the last 6 months</span>
+
+                                      <span class="summary__answer">In the 6 months before custody</span>
+
                                     </li>
                                   </ul>
                                 </dd>
@@ -241,6 +243,7 @@
                                   <a class="govuk-link govuk-link--disabled" aria-disabled="true" tabindex="-1">Change<span class="govuk-visually-hidden"> (Amphetamines (including speed, methamphetamine))</span></a>
                                 </dd>
                               </div>
+
                             </dl>
                           </div>
                         </div>
@@ -248,10 +251,27 @@
                     </div>
                   </dl>
   
-          
 
+                  <dl class="govuk-summary-list summary-list" style="margin-top: -40px;">
+                    <div class="govuk-summary-list__row summary-list__row">
+                      <dt class="govuk-summary-list__key summary-list__key">
+                        <span class="summary__label">Details about Alex's drug use in custody</span>
+                      </dt>
+                      <dd class="govuk-summary-list__value summary-list__value">
+                        <ul class="govuk-list">
+                          <li class="summary-details-list">
+                            <span class="summary__answer">Alex uses these drugs to cope with stress on a regular basis. This is confirmed by the most recent drug test.</span>
+                          </li>
+                        </ul>
+                      </dd>
+                      <dd class="govuk-summary-list__actions summary-list__actions">
+                        <a class="govuk-link govuk-link--disabled" aria-disabled="true" tabindex="-1">Change<span class="govuk-visually-hidden"> (Details about Alex's drug use in custody)</span></a>
+                      </dd>
+                    </div>
+                  </dl>
+<br>
+                  <h3 class="govuk-heading-m drugs-summary__subheading">Drug use background</h3>
 
-                  <h3 class="govuk-heading-m drugs-summary__subheading">More information</h3>
 
 
 
@@ -343,40 +363,7 @@
               <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="practitioner-analysis" role="tabpanel" aria-labelledby="tab_practitioner-analysis">
                 <form id="form" method="post" action="#practitioner-analysis" data-autosave="true" data-autosave-enabled="true">
                   <input type="hidden" name="x-csrf-token" value="EuxWnrI0-8q4EJzV1Hs00SUJbMxT4CGyrAbI">
-                  <div class="govuk-form-group form-group ">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend drugs_practitioner_analysis_motivated_to_stop govuk-fieldset__legend--m">
-                        Does Alex seem motivated to stop or reduce their drug use?
-                      </legend>
-                      <div class="govuk-radios" data-module="govuk-radios" data-govuk-radios-init="">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="NO_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop">
-                            Does not show motivation to stop or reduce
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-2" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="PARTIAL_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-2">
-                            Shows some motivation to stop or reduce 
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-3" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="FULL_MOTIVATION">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-3">
-                            Motivated to stop or reduce
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="drugs_practitioner_analysis_motivated_to_stop-4" name="drugs_practitioner_analysis_motivated_to_stop" type="radio" value="UNKNOWN">
-                          <label class="govuk-label govuk-radios__label" for="drugs_practitioner_analysis_motivated_to_stop-4">
-                            Unknown
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="govuk-form-group form-group ">
+
                     
                   
                   
@@ -472,7 +459,9 @@
                     </fieldset>
                   </div>
                   <div class="questiongroup-action-buttons">
-                    <a href="./drug5done.html" class="govuk-button govuk-!-margin-bottom-3 govuk-!-margin-right-1" role="button" draggable="false" data-module="govuk-button" data-govuk-button-init="">
+
+                    <a href="./drug5done.html#practitioner-analysis" class="govuk-button govuk-!-margin-bottom-3 govuk-!-margin-right-1" role="button" draggable="false" data-module="govuk-button" data-govuk-button-init="">
+
                       Mark as complete
                     </a>
                   </div>

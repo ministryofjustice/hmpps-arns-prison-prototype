@@ -197,60 +197,22 @@ function renderDrugsSection() {
   });
 
   html += `<div class="govuk-inset-text no-wrap">
-    Alex has used Cannabis, Hallucinogens, Heroin in custody.
+
+    Alex has used Cannabis, Hallucinogens in custody.
+
   </div>`;
   // Give details textarea
   html += `<div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
     <h4 class="govuk-heading-m give-details-no-wrap">Give details about Alex's drug use in custody</h4>
     <div id="not_used_details-hint" class="govuk-hint">
-      For example, how often they use these drugs, if they have stopped using, if their use is an issue, and any related hospital visits.
-    </div>
+
+For example, how often they use these drugs, if they have stopped using, if their use is an issue, and any related hospital visits. Also include the results of any mandatory drug testing.    </div>
+
     <div class="grow-wrap" data-replicated-value="">
       <textarea class="govuk-textarea govuk-!-width-full govuk-js-character-count" id="not_used_details" name="not_used_details" rows="5" aria-describedby="not_used_details-hint"></textarea>
     </div>
     <div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true">You have 2,000 characters remaining</div>
     <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
-  </div>`;
-  // Which drugs has Alex injected?
-  html += `<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        Which drugs has Alex injected?
-      </legend>
-      <div class="govuk-hint">Select all that apply.</div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="injected_none" name="injected_drugs" type="checkbox" value="NONE">
-          <label class="govuk-label govuk-checkboxes__label" for="injected_none">None</label>
-        </div>
-      </div>
-      <div style="margin: 10px 0;">or</div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="injected_heroin" name="injected_drugs" type="checkbox" value="HEROIN" data-aria-controls="heroin-injected-conditional" aria-expanded="false">
-          <label class="govuk-label govuk-checkboxes__label" for="injected_heroin">Heroin</label>
-        </div>
-        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="heroin-injected-conditional">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="heroin_injected_when">When has Alex injected this drug?</label>
-            <div class="govuk-hint">Select one or both.</div>
-            <div class="govuk-checkboxes" id="heroin_injected_when_group">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="heroin_injected_last6" name="heroin_injected_when" type="checkbox" value="LAST6">
-                <label class="govuk-label govuk-checkboxes__label" for="heroin_injected_last6">In the 6 months before custody</label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="heroin_injected_more6" name="heroin_injected_when" type="checkbox" value="MORE6">
-                <label class="govuk-label govuk-checkboxes__label" for="heroin_injected_more6">More than 6 months before custody</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-    </fieldset>
   </div>`;
 
   container.innerHTML = html;
@@ -271,24 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-  // Mutually exclusive logic for 'None' and 'Heroin' checkboxes
-  var noneCheckbox = document.getElementById('injected_none');
-  var heroinCheckbox = document.getElementById('injected_heroin');
-  if (noneCheckbox && heroinCheckbox) {
-    noneCheckbox.addEventListener('change', function() {
-      if (noneCheckbox.checked) {
-        heroinCheckbox.checked = false;
-        heroinCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
-        heroinCheckbox.dispatchEvent(new Event('click', { bubbles: true }));
-      }
-    });
-    heroinCheckbox.addEventListener('change', function() {
-      if (heroinCheckbox.checked) {
-        noneCheckbox.checked = false;
-        noneCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
-      }
-    });
-  }
+
   var form = document.getElementById('form');
   if (form) {
     form.addEventListener('submit', function(e) {
@@ -297,13 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'drug4a.html';
     });
   }
-  var backLink = document.querySelector('a.govuk-back-link');
-  if (backLink) {
-    backLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.href = 'drug2a.html';
-    });
-  }
+
 });
 
 // Prevent navigation for all side nav links
