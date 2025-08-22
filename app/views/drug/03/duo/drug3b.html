@@ -218,7 +218,9 @@ function renderDrugsSection() {
         <div class="form-group">
           <div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
             <label class="govuk-label how_often_used_last_six_months_${drug.value.toLowerCase()}_details " for="how_often_used_last_six_months_${drug.value.toLowerCase()}_details">Give details (optional)</label>
+
             <div class="govuk-hint" style="color: #505a5f; margin-bottom: 15px;">Include details of any evidence.</div>
+
             <div class="grow-wrap" data-replicated-value="">
               <textarea class="govuk-textarea govuk-!-width-full govuk-js-character-count" id="how_often_used_last_six_months_${drug.value.toLowerCase()}_details" name="how_often_used_last_six_months_${drug.value.toLowerCase()}_details" rows="5" aria-describedby="how_often_used_last_six_months_${drug.value.toLowerCase()}_details-info" data-grow-wrap=""></textarea>
             </div>
@@ -227,6 +229,7 @@ function renderDrugsSection() {
             <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
           </div>
         </div>
+
       </div>
     `;
   });
@@ -237,6 +240,7 @@ function renderDrugsSection() {
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
         Which drugs did Alex inject before custody?
+
       </legend>
       <div class="govuk-hint">Select all that apply.</div>
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -301,9 +305,11 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       // Go to drug3a (Flow duo)
+
       window.location.href = 'drug2a.html';
     });
   }
+
 
 });
 

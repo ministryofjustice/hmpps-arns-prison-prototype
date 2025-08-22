@@ -197,20 +197,23 @@ function renderDrugsSection() {
   });
 
   html += `<div class="govuk-inset-text no-wrap">
+
     Alex has used Cannabis, Hallucinogens in custody.
+
   </div>`;
   // Give details textarea
   html += `<div class="govuk-form-group govuk-character-count form-group give-details-wide" data-module="govuk-character-count" data-maxlength="2000">
     <h4 class="govuk-heading-m give-details-no-wrap">Give details about Alex's drug use in custody</h4>
     <div id="not_used_details-hint" class="govuk-hint">
+
 For example, how often they use these drugs, if they have stopped using, if their use is an issue, and any related hospital visits. Also include the results of any mandatory drug testing.    </div>
+
     <div class="grow-wrap" data-replicated-value="">
       <textarea class="govuk-textarea govuk-!-width-full govuk-js-character-count" id="not_used_details" name="not_used_details" rows="5" aria-describedby="not_used_details-hint"></textarea>
     </div>
     <div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true">You have 2,000 characters remaining</div>
     <div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 2,000 characters remaining</div>
   </div>`;
-
 
   container.innerHTML = html;
 }

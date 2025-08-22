@@ -94,14 +94,16 @@
               <span class="govuk-caption-l" style="color: #0b0c0c;">Drug use</span>
               <strong class="govuk-tag govuk-tag--grey" style="align-self: center;">Incomplete</strong>
             </div>
+
             <h2 class="govuk-heading-l" style="margin-bottom: 0;">Which drugs has Alex misused in <br> custody?</h2>
+
           </div>
           <br>
           <div class="govuk-!-width-three-quarters">
             <form id="form" method="post" action="#">
               <div class="govuk-form-group form-group ">
                 <fieldset class="govuk-fieldset" aria-describedby="select_misused_drugs-hint">
-              
+
                   <div id="select_misused_drugs-hint" class="govuk-hint">
                     Select all that apply.
                   </div>
@@ -465,8 +467,10 @@
 document.getElementById('form').addEventListener('submit', function(e) {
   e.preventDefault();
   // Go to drug3b (Flow duo)
+
   window.location.href = 'drug3a.html';
 });
+
 
 
 </script>
