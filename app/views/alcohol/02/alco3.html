@@ -304,7 +304,7 @@
               <div class="govuk-form-group form-group ">
                 <fieldset class="govuk-fieldset" aria-describedby="alcohol_custody-hint">
                   <legend class="govuk-fieldset__legend alcohol_custody govuk-fieldset__legend--m">
-                    Has Alex shown evidence of drinking alcohol in custody?
+                    Is there evidence Alex has been drinking alcohol in custody?
                   </legend>
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
@@ -319,8 +319,15 @@
                       </div>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="alcohol_custody_no" name="alcohol_custody" type="radio" value="no">
+                      <input class="govuk-radios__input" id="alcohol_custody_no" name="alcohol_custody" type="radio" value="no" aria-controls="conditional-alcohol_custody-no" aria-expanded="false">
                       <label class="govuk-label govuk-radios__label" for="alcohol_custody_no">No</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-alcohol_custody-no">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="alcohol_custody_details_no">Give details (optional)</label>
+                        <textarea class="govuk-textarea govuk-js-character-count" id="alcohol_custody_details_no" name="alcohol_custody_details_no" rows="5" maxlength="2000" aria-describedby="alcohol_custody_details_no-info"></textarea>
+                        <div id="alcohol_custody_details_no-info" class="govuk-hint govuk-character-count__message" style="margin-top: -20px;">You have 2,000 characters remaining</div>
+                      </div>
                     </div>
                   </div>
                 </fieldset>
