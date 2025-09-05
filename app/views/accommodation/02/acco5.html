@@ -167,8 +167,15 @@
                   <div class="govuk-hint" style="color: #505a5f; margin-bottom: 12px;">Use your judgement based on what Alex tells you and any other sources of evidence you have. Any proposed accommodation will need to be approved by Alex's community offender manager (COM).</div>
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="location_suitable_yes" name="location_suitable" type="radio" value="Yes">
+                      <input class="govuk-radios__input" id="location_suitable_yes" name="location_suitable" type="radio" value="Yes" data-aria-controls="conditional-location_suitable_yes">
                       <label class="govuk-label govuk-radios__label" for="location_suitable_yes">Yes</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location_suitable_yes">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="location_suitable_yes_details">Give details (optional)</label>
+                        <textarea class="govuk-textarea" id="location_suitable_yes_details" name="location_suitable_yes_details" rows="3" maxlength="400"></textarea>
+                        <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
+                      </div>
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="location_suitable_no" name="location_suitable" type="radio" value="No" data-aria-controls="conditional-location_suitable_no">
@@ -211,13 +218,29 @@
                               </div>
                             </div>
                           </div>
+                          <div class="govuk-form-group" style="margin-top: 20px;">
+                            <label class="govuk-label" for="location_suitable_no_details">Give details (optional)</label>
+                            <textarea class="govuk-textarea" id="location_suitable_no_details" name="location_suitable_no_details" rows="3" maxlength="400"></textarea>
+                            <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
+                          </div>
                         </fieldset>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="location_suitable_unknown" name="location_suitable" type="radio" value="Unknown" data-aria-controls="conditional-location_suitable_unknown">
+                      <label class="govuk-label govuk-radios__label" for="location_suitable_unknown">Unknown</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location_suitable_unknown">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="location_suitable_unknown_details">Give details</label>
+                        <textarea class="govuk-textarea" id="location_suitable_unknown_details" name="location_suitable_unknown_details" rows="3" maxlength="400"></textarea>
+                        <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
                       </div>
                     </div>
                   </div>
                 </fieldset>
               </div>
-              <!-- New question: Is Alex’s proposed accommodation suitable? -->
+              <!-- New question: Is Alex's proposed accommodation suitable? -->
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
 
@@ -228,8 +251,15 @@
                   <div class="govuk-hint">This includes things like safety or having appropriate amenities. Use your judgement based on what Alex tells you and any other sources of evidence you have. Any proposed accommodation will need to be approved by Alex's community offender manager (COM).</div>
                   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="accommodation_suitable_yes" name="accommodation_suitable" type="radio" value="Yes">
+                      <input class="govuk-radios__input" id="accommodation_suitable_yes" name="accommodation_suitable" type="radio" value="Yes" data-aria-controls="conditional-accommodation_suitable_yes">
                       <label class="govuk-label govuk-radios__label" for="accommodation_suitable_yes">Yes</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-accommodation_suitable_yes">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="accommodation_suitable_yes_details">Give details (optional)</label>
+                        <textarea class="govuk-textarea" id="accommodation_suitable_yes_details" name="accommodation_suitable_yes_details" rows="3" maxlength="400"></textarea>
+                        <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
+                      </div>
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="accommodation_suitable_yes_concerns" name="accommodation_suitable" type="radio" value="Yes, with concerns" data-aria-controls="conditional-accommodation_suitable_concerns">
@@ -275,6 +305,11 @@
                                 <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
                               </div>
                             </div>
+                          </div>
+                          <div class="govuk-form-group" style="margin-top: 20px;">
+                            <label class="govuk-label" for="accommodation_suitable_concerns_details">Give details (optional)</label>
+                            <textarea class="govuk-textarea" id="accommodation_suitable_concerns_details" name="accommodation_suitable_concerns_details" rows="3" maxlength="400"></textarea>
+                            <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
                           </div>
                         </fieldset>
                       </div>
@@ -324,7 +359,23 @@
                               </div>
                             </div>
                           </div>
+                          <div class="govuk-form-group" style="margin-top: 20px;">
+                            <label class="govuk-label" for="accommodation_suitable_no_details">Give details (optional)</label>
+                            <textarea class="govuk-textarea" id="accommodation_suitable_no_details" name="accommodation_suitable_no_details" rows="3" maxlength="400"></textarea>
+                            <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
+                          </div>
                         </fieldset>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="accommodation_suitable_unknown" name="accommodation_suitable" type="radio" value="Unknown" data-aria-controls="conditional-accommodation_suitable_unknown">
+                      <label class="govuk-label govuk-radios__label" for="accommodation_suitable_unknown">Unknown</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-accommodation_suitable_unknown">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="accommodation_suitable_unknown_details">Give details</label>
+                        <textarea class="govuk-textarea" id="accommodation_suitable_unknown_details" name="accommodation_suitable_unknown_details" rows="3" maxlength="400"></textarea>
+                        <div class="govuk-hint" style="margin-top: -25px;">You have 2,000 characters remaining</div>
                       </div>
                     </div>
                   </div>
