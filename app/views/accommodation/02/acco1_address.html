@@ -113,28 +113,64 @@
                         <legend class="govuk-visually-hidden">Settled accommodation type</legend>
                         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_homeowner" name="settled_type" type="radio" value="Homeowner">
+                            <input class="govuk-radios__input" id="settled_homeowner" name="settled_type" type="radio" value="Homeowner" data-aria-controls="homeowner-address-conditional">
                             <label class="govuk-label govuk-radios__label" for="settled_homeowner">Homeowner</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="homeowner-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="homeowner_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="homeowner_address" name="homeowner_address" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_friends_family" name="settled_type" type="radio" value="Living with friends or family">
+                            <input class="govuk-radios__input" id="settled_friends_family" name="settled_type" type="radio" value="Living with friends or family" data-aria-controls="friends-family-address-conditional">
                             <label class="govuk-label govuk-radios__label" for="settled_friends_family">Living with friends or family</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="friends-family-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="friends_family_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="friends_family_address" name="friends_family_address" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_renting_private" name="settled_type" type="radio" value="Renting privately">
+                            <input class="govuk-radios__input" id="settled_renting_private" name="settled_type" type="radio" value="Renting privately" data-aria-controls="renting-private-address-conditional">
                             <label class="govuk-label govuk-radios__label" for="settled_renting_private">Renting privately</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="renting-private-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="renting_private_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="renting_private_address" name="renting_private_address" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_renting_social" name="settled_type" type="radio" value="Renting from social, local authority or other">
+                            <input class="govuk-radios__input" id="settled_renting_social" name="settled_type" type="radio" value="Renting from social, local authority or other" data-aria-controls="renting-social-address-conditional">
                             <label class="govuk-label govuk-radios__label" for="settled_renting_social">Renting from social, local authority or other</label>
                           </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_healthcare" name="settled_type" type="radio" value="Residential healthcare">
-                            <label class="govuk-label govuk-radios__label" for="settled_healthcare">Residential healthcare</label>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="renting-social-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="renting_social_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="renting_social_address" name="renting_social_address" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="settled_supported" name="settled_type" type="radio" value="Supported accommodation">
+                            <input class="govuk-radios__input" id="settled_healthcare" name="settled_type" type="radio" value="Residential healthcare" data-aria-controls="healthcare-address-conditional">
+                            <label class="govuk-label govuk-radios__label" for="settled_healthcare">Residential healthcare</label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="healthcare-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="healthcare_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="healthcare_address" name="healthcare_address" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="settled_supported" name="settled_type" type="radio" value="Supported accommodation" data-aria-controls="supported-address-conditional">
                             <label class="govuk-label govuk-radios__label" for="settled_supported">Supported accommodation</label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="supported-address-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="supported_address">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="supported_address" name="supported_address" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="settled_unknown" name="settled_type" type="radio" value="Unknown" data-aria-controls="settled-unknown-details-conditional">
@@ -159,19 +195,37 @@
                         <legend class="govuk-visually-hidden">Temporary accommodation type</legend>
                         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="temporary_approved_premises" name="temporary_type" type="radio" value="Approved premises">
+                            <input class="govuk-radios__input" id="temporary_approved_premises" name="temporary_type" type="radio" value="Approved premises" data-aria-controls="approved-premises-details-conditional">
                             <label class="govuk-label govuk-radios__label" for="temporary_approved_premises">Approved premises</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="approved-premises-details-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="approved_premises_details">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="approved_premises_details" name="approved_premises_details" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="temporary_cas2" name="temporary_type" type="radio" value="Community Accommodation Service Tier 2 (CAS2)">
+                            <input class="govuk-radios__input" id="temporary_cas2" name="temporary_type" type="radio" value="Community Accommodation Service Tier 2 (CAS2)" data-aria-controls="cas2-details-conditional">
                             <label class="govuk-label govuk-radios__label" for="temporary_cas2">Community Accommodation Service Tier 2 (CAS2)</label>
                           </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="temporary_cas3" name="temporary_type" type="radio" value="Community Accommodation Service Tier 3 (CAS3)">
-                            <label class="govuk-label govuk-radios__label" for="temporary_cas3">Community Accommodation Service Tier 3 (CAS3)</label>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="cas2-details-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="cas2_details">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="cas2_details" name="cas2_details" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="temporary_immigration" name="temporary_type" type="radio" value="Immigration accommodation">
+                            <input class="govuk-radios__input" id="temporary_cas3" name="temporary_type" type="radio" value="Community Accommodation Service Tier 3 (CAS3)" data-aria-controls="cas3-details-conditional">
+                            <label class="govuk-label govuk-radios__label" for="temporary_cas3">Community Accommodation Service Tier 3 (CAS3)</label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="cas3-details-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="cas3_details">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="cas3_details" name="cas3_details" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="temporary_immigration" name="temporary_type" type="radio" value="Immigration accommodation" data-aria-controls="immigration-details-conditional">
                             <label class="govuk-label govuk-radios__label" for="temporary_immigration">Immigration accommodation</label>
                             <div class="govuk-hint" style="margin-left: 60px; margin-bottom: 10px; color: #505A5F;">
                               <div style="margin-bottom: 8px;">This includes:</div>
@@ -181,10 +235,22 @@
                               </ul>
                             </div>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="immigration-details-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="immigration_details">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="immigration_details" name="immigration_details" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="temporary_short_term" name="temporary_type" type="radio" value="Short term accommodation">
+                            <input class="govuk-radios__input" id="temporary_short_term" name="temporary_type" type="radio" value="Short term accommodation" data-aria-controls="short-term-details-conditional">
                             <label class="govuk-label govuk-radios__label" for="temporary_short_term">Short term accommodation</label>
                             <div class="govuk-hint" style="margin-left: 60px; margin-bottom: 8px; color: #505a5f;">Includes living with friends or family, or in a hotel</div>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="short-term-details-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="short_term_details">What is the address? (optional)</label>
+                              <textarea class="govuk-textarea" id="short_term_details" name="short_term_details" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="temporary_unknown" name="temporary_type" type="radio" value="Unknown" data-aria-controls="temporary-unknown-details-conditional">
@@ -209,24 +275,54 @@
                         <legend class="govuk-visually-hidden">No accommodation type</legend>
                         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="none_campsite" name="none_type" type="radio" value="Campsite">
+                            <input class="govuk-radios__input" id="none_campsite" name="none_type" type="radio" value="Campsite" data-aria-controls="campsite-area-conditional">
                             <label class="govuk-label govuk-radios__label" for="none_campsite">Campsite</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="campsite-area-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="campsite_area">What is the area? (optional)</label>
+                              <textarea class="govuk-textarea" id="campsite_area" name="campsite_area" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="none_emergency_hostel" name="none_type" type="radio" value="Emergency hostel">
+                            <input class="govuk-radios__input" id="none_emergency_hostel" name="none_type" type="radio" value="Emergency hostel" data-aria-controls="emergency-hostel-area-conditional">
                             <label class="govuk-label govuk-radios__label" for="none_emergency_hostel">Emergency hostel</label>
                           </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="emergency-hostel-area-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="emergency_hostel_area">What is the area? (optional)</label>
+                              <textarea class="govuk-textarea" id="emergency_hostel_area" name="emergency_hostel_area" rows="3"></textarea>
+                            </div>
+                          </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="none_homeless" name="none_type" type="radio" value="Homeless">
+                            <input class="govuk-radios__input" id="none_homeless" name="none_type" type="radio" value="Homeless" data-aria-controls="homeless-area-conditional">
                             <label class="govuk-label govuk-radios__label" for="none_homeless">Homeless <span class="govuk-body" style="display:inline; color:#0b0c0c; font-weight:normal;">- includes squatting</span></label>
                           </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="none_rough_sleeping" name="none_type" type="radio" value="Rough sleeping">
-                            <label class="govuk-label govuk-radios__label" for="none_rough_sleeping">Rough sleeping</label>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="homeless-area-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="homeless_area">What is the area? (optional)</label>
+                              <textarea class="govuk-textarea" id="homeless_area" name="homeless_area" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="none_shelter" name="none_type" type="radio" value="Shelter">
+                            <input class="govuk-radios__input" id="none_rough_sleeping" name="none_type" type="radio" value="Rough sleeping" data-aria-controls="rough-sleeping-area-conditional">
+                            <label class="govuk-label govuk-radios__label" for="none_rough_sleeping">Rough sleeping</label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="rough-sleeping-area-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="rough_sleeping_area">What is the area? (optional)</label>
+                              <textarea class="govuk-textarea" id="rough_sleeping_area" name="rough_sleeping_area" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="none_shelter" name="none_type" type="radio" value="Shelter" data-aria-controls="shelter-area-conditional">
                             <label class="govuk-label govuk-radios__label" for="none_shelter">Shelter</label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="shelter-area-conditional">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="shelter_area">What is the area? (optional)</label>
+                              <textarea class="govuk-textarea" id="shelter_area" name="shelter_area" rows="3"></textarea>
+                            </div>
                           </div>
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="none_unknown" name="none_type" type="radio" value="Unknown" data-aria-controls="none-unknown-details-conditional">
