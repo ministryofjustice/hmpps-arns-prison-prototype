@@ -422,6 +422,30 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'alcox1.html';
     });
   }
+
+  // Handle "No impact" checkbox behavior
+  var noImpactCheckbox = document.getElementById('alcohol_impact_none');
+  var otherImpactCheckboxes = document.querySelectorAll('input[name="alcohol_impact"]:not(#alcohol_impact_none)');
+  
+  if (noImpactCheckbox) {
+    noImpactCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        // Uncheck all other impact checkboxes
+        otherImpactCheckboxes.forEach(function(checkbox) {
+          checkbox.checked = false;
+        });
+      }
+    });
+  }
+
+  // Handle other impact checkboxes - uncheck "No impact" if any other is selected
+  otherImpactCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      if (this.checked && noImpactCheckbox) {
+        noImpactCheckbox.checked = false;
+      }
+    });
+  });
 });
 </script>
 {% endblock %}
